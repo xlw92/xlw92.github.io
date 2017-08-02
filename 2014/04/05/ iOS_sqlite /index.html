@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>SQLite简单操作 | xlw92&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="由于之前方向是偏向后台所以mysql用得比较多，在移动端比较习惯用FMDB。对于我自己来说操作sql语句比Coredata来的省事。下面就简单介绍下SQLite的基本使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/07/11/hello-world的副本/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-07-11T06:37:51.000Z">
+<meta property="og:title" content="SQLite简单操作">
+<meta property="og:url" content="http://yoursite.com/2014/04/05/ iOS_sqlite /index.html">
+<meta property="og:site_name" content="xlw92&#39;s blog">
+<meta property="og:description" content="由于之前方向是偏向后台所以mysql用得比较多，在移动端比较习惯用FMDB。对于我自己来说操作sql语句比Coredata来的省事。下面就简单介绍下SQLite的基本使用">
+<meta property="og:updated_time" content="2017-07-26T14:48:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="SQLite简单操作">
+<meta name="twitter:description" content="由于之前方向是偏向后台所以mysql用得比较多，在移动端比较习惯用FMDB。对于我自己来说操作sql语句比Coredata来的省事。下面就简单介绍下SQLite的基本使用">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="xlw92&#39;s blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/avatar_an.jpeg">
@@ -131,35 +131,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world的副本" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post- iOS_sqlite " class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      SQLite简单操作
     </h1>
   
 
         
-        <a href="/2017/07/11/hello-world的副本/" class="archive-article-date">
-  	<time datetime="2017-07-11T06:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-11</time>
+        <a href="/2014/04/05/ iOS_sqlite /" class="archive-article-date">
+  	<time datetime="2014-04-05T11:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-04-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <blockquote>
+<p>由于之前方向是偏向后台所以mysql用得比较多，在移动端比较习惯用FMDB。对于我自己来说操作sql语句比Coredata来的省事。下面就简单介绍下SQLite的基本使用</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="基本sql语句"><a href="#基本sql语句" class="headerlink" title="基本sql语句"></a>基本sql语句</h1><ol>
+<li><p>创建表</p>
+<p><code>CREATE TABLE IF NOT EXISTS t_sutdent(id INTEGER PRIMARY KEY AUTOINCREMENT, name, score);</code> </p>
+<pre><code>`CREATE TABLE IF NOT EXISTS t_sutdent(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, score REAL);`
+</code></pre><p> <code>CREATE TABLE t_student(id INTEGER PRIMARY KEY, name TEXT, score REAL);</code><br> <code>CREATE TABLE t_student(id INTEGER, name TEXT, score REAL, PRIMARY KEY(id));</code><br> <code>CREATE TABLE t_student(id INTEGER, name TEXT, score REAL);</code></p>
+</li>
+<li><p>删除表</p>
+<p><code>DROP TABLE IF EXISTS t_sutdent;</code><br> <code>DROP TABLE  t_sutdent;</code></p>
+</li>
+<li><p>插入字段</p>
+<p><code>INSERT INTO t_sutdent(score) VALUES(38);</code><br><code>INSERT INTO t_sutdent(score, name) VALUES(100, &#39;tt&#39;);</code><br><code>INSERT INTO t_sutdent(name, score) VALUES(&#39;zs&#39;,     99);</code></p>
+</li>
+<li><p>改</p>
+<p><code>UPDATE t_sutdent SET name = &#39;lnj&#39;;</code></p>
+</li>
+<li><p>删除列</p>
+<p><code>DELETE xxx FROM t_sutdent;</code></p>
+</li>
+<li><p>条件语句</p>
+<p><code>UPDATE t_sutdent SET name = &#39;xxx&#39;  WHERE score = 38 AND name =&#39;ww&#39;;</code><br><code>UPDATE t_sutdent SET score = 99 WHERE name IS &#39;tt&#39;;</code><br><code>UPDATE t_sutdent SET score = 0 WHERE name = &#39;tt&#39;;</code></p>
+</li>
+<li><p>查询</p>
+<p><code>SELECT * FROM t_sutdent WHERE score &gt;= 60;
+SELECT * FROM t_sutdent;</code><br><code>SELECT score FROM t_sutdent;</code><br><code>SELECT name, score FROM t_sutdent;</code></p>
+</li>
+<li><p>查询统计</p>
+<p><code>起别名</code><br><code>SELECT count(*) FROM t_sutdent;</code><br><code>SELECT count(score) FROM t_sutdent WHERE score &gt;= 60;</code><br><code>SELECT stu.name , stu.score FROM t_sutdent AS stu;</code><br><code>SELECT name  myName2, score  myScore2 FROM t_sutdent;</code><br><code>SELECT name AS myName, score AS myScore FROM t_sutdent;</code></p>
+<p>9.分页</p>
+<p><code>SELECT * FROM t_sutdent LIMIT  10;</code><br><code>SELECT * FROM t_sutdent LIMIT 0, 10;</code></p>
+</li>
+</ol>
+<h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><blockquote>
+<p>创建表可以用鼎鼎大名的navicat等第三方工具创建，因为比较简单就不介绍了，用shell创建也可以，但是感觉没必要。全看自己喜好</p>
+</blockquote>
+<ol>
+<li><p>打开数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">/** 要操作的数据库文件路径 */</div><div class="line">	+ (NSString *) pathWithDatabase</div><div class="line">	&#123;</div><div class="line">    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,</div><div class="line">                                                         NSUserDomainMask,</div><div class="line">                                                         YES);</div><div class="line">    NSString *documentDirectory = [paths lastObject];</div><div class="line">    return [documentDirectory stringByAppendingPathComponent:@&quot;catalog.db&quot;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">/** 创建数据库 */</div><div class="line">- (void) createEditableDatabase</div><div class="line">&#123;</div><div class="line">    BOOL success;</div><div class="line">    NSError *error;</div><div class="line">    NSFileManager *fileManager = [NSFileManager defaultManager];</div><div class="line">    // 数据库文件路径</div><div class="line">    NSString *writableDB = [DBAccess pathWithDatabase];</div><div class="line">    // 文件是否存在</div><div class="line">    success = [fileManager fileExistsAtPath:writableDB];</div><div class="line">    if (!success) &#123;</div><div class="line">        // 不存在就创建</div><div class="line">        NSString *defaultPath = [[[NSBundle mainBundle]</div><div class="line">                                          resourcePath]</div><div class="line">          stringByAppendingPathComponent:@&quot;catalog.db&quot;];</div><div class="line">        // 拷贝文件到某文件路径</div><div class="line">        success = [fileManager copyItemAtPath:defaultPath</div><div class="line">                                       toPath:writableDB</div><div class="line">                                        error:&amp;error];</div><div class="line">        if (!success) &#123;</div><div class="line">            NSAssert1(0, @&quot;Failed to create writable database file:&apos;%@&apos;.&quot;,</div><div class="line">                      [error localizedDescription]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/** 打开数据库 */</div><div class="line">	- (void)initializeDatabase</div><div class="line">&#123;</div><div class="line">    // 确认可操作数据是否存在</div><div class="line">    [self createEditableDatabase];</div><div class="line">    // 数据库路径</div><div class="line">    NSString *path = [DBAccess pathWithDatabase];</div><div class="line">    // 是否打开成功</div><div class="line">    if (sqlite3_open([path UTF8String], &amp;database) == SQLITE_OK)</div><div class="line">    &#123;</div><div class="line">        NSLog(@&quot;Opening Database&quot;);</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        // 打开数据库失败</div><div class="line">        sqlite3_close(database);</div><div class="line">        NSAssert1(0, @&quot;Failed to open database: &apos;%s&apos;.&quot;, sqlite3_errmsg(database));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查询数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">- (NSMutableArray *)getAllProducts</div><div class="line">&#123;</div><div class="line">    // 查询语句</div><div class="line">    char *const sql = &quot;SELECT product.ID, product.Name, Manufacturer.name, \</div><div class="line">    product.details, product.price, product.quantityonhand, country.country, \</div><div class="line">    product.image FROM Product, Manufacturer, Country WHERE \</div><div class="line">    manufacturer.manufacturerid=product.manufacturerid AND \</div><div class="line">    product.countryoforiginid=country.countryid&quot;;</div><div class="line">    // 将sql文本转换成一个准备语句</div><div class="line">    sqlite3_stmt *statement;</div><div class="line">    int sqlResult = sqlite3_prepare_v2(database, sql, -1, &amp;statement, NULL);</div><div class="line">    // 装查询结果的可变数组</div><div class="line">    NSMutableArray *arrayM = [NSMutableArray array];</div><div class="line">    // 结果状态为OK时，开始取出每条数据</div><div class="line">    if ( sqlResult == SQLITE_OK) &#123;</div><div class="line">        // 只要还有下一行，就取出数据。</div><div class="line">        while (sqlite3_step(statement) == SQLITE_ROW) &#123;</div><div class="line">            Product *product = [[Product alloc] init];</div><div class="line">            // 每列数据</div><div class="line">            char *name = (char *)sqlite3_column_text(statement, 1);</div><div class="line">            char *manufacturer = (char *)sqlite3_column_text(statement, 2);</div><div class="line">            char *details = (char *)sqlite3_column_text(statement, 3);</div><div class="line">            char *countryOfOrigin = (char *)sqlite3_column_text(statement, 6);</div><div class="line">            char *image = (char *)sqlite3_column_text(statement, 7);</div><div class="line">            // 为模型赋值</div><div class="line">            product.ID = sqlite3_column_int(statement, 0);</div><div class="line">            product.name = [self stringWithCharString:name];</div><div class="line">            product.manufacturer = [self stringWithCharString:manufacturer];</div><div class="line">            product.details = [self stringWithCharString:details];</div><div class="line">            product.price = sqlite3_column_double(statement, 4);</div><div class="line">            product.quantity = sqlite3_column_int(statement, 5);</div><div class="line">            product.countryOfOrigin = [self stringWithCharString:countryOfOrigin];</div><div class="line">            product.image = [self stringWithCharString:image];</div><div class="line">            // 添加进数组</div><div class="line">            [arrayM addObject:product];</div><div class="line">        &#125;</div><div class="line">        // 完成后释放prepare创建的准备语句</div><div class="line">        sqlite3_finalize(statement);</div><div class="line">    &#125;</div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        NSLog(@&quot;Problem with database:&quot;);</div><div class="line">        NSLog(@&quot;%d&quot;,sqlResult);</div><div class="line">    &#125;</div><div class="line">    return arrayM;</div><div class="line">&#125;</div><div class="line">/** C字符串转换OC字符串 */</div><div class="line">- (NSString *) stringWithCharString:(char *)string</div><div class="line">&#123;</div><div class="line">    return (string) ? [NSString stringWithUTF8String:string] : @&quot;&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>关闭数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- (void)closeDatabase</div><div class="line">&#123;</div><div class="line">    if (sqlite3_close(database) != SQLITE_OK) &#123;</div><div class="line">        NSAssert1(0, @&quot;Failed to close database: &apos;%s&apos;.&quot;, sqlite3_errmsg(database));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>参数化查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">      // 条件查询举例</div><div class="line">      NSString *sql = @&quot;SELECT Product.name, country.country</div><div class="line">                        FROM country, product</div><div class="line">                        WHERE country＝？and countryoforiginid＝？&quot;;</div><div class="line">      // 查询语句绑定函数，可以运行时动态设置成需要查询的值（可缓存和重用，性能好）。</div><div class="line">      // 第一个参数为预编译语句，第二个为SQL语句中‘？’的索引（从1开始），第三个为运行时确定的查询数据，后面参数各不相同。</div><div class="line">      sqlite3_bind_blob(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#const void *#&gt;, &lt;#int n#&gt;, &lt;#void (*)(void *)#&gt;);</div><div class="line">      sqlite3_bind_double(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#double#&gt;);</div><div class="line">      sqlite3_bind_int(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#int#&gt;);</div><div class="line">      sqlite3_bind_int64(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#sqlite3_int64#&gt;);</div><div class="line">      sqlite3_bind_null(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;);</div><div class="line">      sqlite3_bind_text(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#const char *#&gt;, &lt;#int n#&gt;, &lt;#void (*)(void *)#&gt;);</div><div class="line">      sqlite3_bind_text16(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#const void *#&gt;, &lt;#int#&gt;, &lt;#void (*)(void *)#&gt;);</div><div class="line">      sqlite3_bind_value(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#const sqlite3_value *#&gt;);</div><div class="line">      sqlite3_bind_zeroblob(&lt;#sqlite3_stmt *#&gt;, &lt;#int#&gt;, &lt;#int n#&gt;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
 
       
 
@@ -218,7 +262,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/11/hello-world的副本/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/04/05/ iOS_sqlite /" alt="微信分享二维码">
     </div>
 </div>
 
@@ -232,11 +276,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/11/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/06/08/Linux 常用命令/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          Linux常用命令
         
       </div>
     </a>

@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | xlw92&#39;s blog</title>
+  <title>基于swift的FMDB使用 | xlw92&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xlw92&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="我应该几年前写过一篇数据库的然后就没有了，这次优化项目中购物车的缓存，遇到一些坑然后现在来分享一下swift下FMDB的使用,由于公司后台的接口数据比较乱，下面的代码字段可能比较复杂仅供参考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于swift的FMDB使用">
+<meta property="og:url" content="http://yoursite.com/2016/05/05/基于swift的FMDB使用/index.html">
 <meta property="og:site_name" content="xlw92&#39;s blog">
+<meta property="og:description" content="我应该几年前写过一篇数据库的然后就没有了，这次优化项目中购物车的缓存，遇到一些坑然后现在来分享一下swift下FMDB的使用,由于公司后台的接口数据比较乱，下面的代码字段可能比较复杂仅供参考">
+<meta property="og:updated_time" content="2017-07-26T14:50:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xlw92&#39;s blog">
+<meta name="twitter:title" content="基于swift的FMDB使用">
+<meta name="twitter:description" content="我应该几年前写过一篇数据库的然后就没有了，这次优化项目中购物车的缓存，遇到一些坑然后现在来分享一下swift下FMDB的使用,由于公司后台的接口数据比较乱，下面的代码字段可能比较复杂仅供参考">
   
     <link rel="alternative" href="/atom.xml" title="xlw92&#39;s blog" type="application/atom+xml">
   
@@ -127,76 +131,146 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-基于swift的FMDB使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/23/iOS开发tips/" class="archive-article-date">
-  	<time datetime="2017-07-23T12:40:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/23/iOS开发tips/">【转】iOS开发一些基本小tips</a>
+    <h1 class="article-title" itemprop="name">
+      基于swift的FMDB使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/22/ARKit/" class="archive-article-date">
-  	<time datetime="2017-07-22T04:13:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
+        
+        <a href="/2016/05/05/基于swift的FMDB使用/" class="archive-article-date">
+  	<time datetime="2016-05-05T11:53:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/22/ARKit/">【转】ARKit的使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>我应该几年前写过一篇数据库的然后就没有了，这次优化项目中购物车的缓存，遇到一些坑然后现在来分享一下swift下FMDB的使用,由于公司后台的接口数据比较乱，下面的代码字段可能比较复杂仅供参考</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div></pre></td><td class="code"><pre><div class="line">import UIKit</div><div class="line"></div><div class="line">class ShopCar_SqliteTools: NSObject &#123;</div><div class="line"></div><div class="line">    // 单例的概念：</div><div class="line">    // 1. 内存中有一个唯一的实例</div><div class="line">    // 2. 提供唯一的全局访问入口</div><div class="line">    // let 是定义常量，而且在 swift 中，let 是线程安全的</div><div class="line">    private static let shareShopCar_SqliteTools = ShopCar_SqliteTools()</div><div class="line">    /// 定义一个类变量，提供全局的访问入口，类变量不能存储数值，但是可以返回数值</div><div class="line">    class var sharedManager: ShopCar_SqliteTools &#123;</div><div class="line">        return shareShopCar_SqliteTools</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /// 获取FMDatabase</div><div class="line">    private func getDb()-&gt;FMDatabase&#123;</div><div class="line">        let filemgr = NSFileManager.defaultManager()</div><div class="line">        let databasePath = &quot;/ShopCar_Sqlite.db&quot;.documentPath()</div><div class="line">     </div><div class="line">        if !filemgr.fileExistsAtPath(databasePath) &#123;</div><div class="line">            let db = FMDatabase(path: databasePath)</div><div class="line">            if db == nil &#123;</div><div class="line">                print(&quot;Error: \(db.lastErrorMessage())&quot;)</div><div class="line">            &#125;</div><div class="line">            if db.open() &#123;</div><div class="line">                let sql_stmt = &quot;CREATE TABLE IF NOT EXISTS ShopCar_Sqlite ( \n&quot; +</div><div class="line">                &quot;imgurl TEXT NOT NULL DEFAULT &apos;&apos;, \n&quot; +</div><div class="line">                &quot;describe TEXT NOT NULL DEFAULT &apos;&apos;, \n&quot; +</div><div class="line">                &quot;ID INTEGER NOT NULL DEFAULT 0, \n&quot; +</div><div class="line">                &quot;number INTEGER NOT NULL DEFAULT 0, \n&quot; +</div><div class="line">                &quot;price TEXT NOT NULL DEFAULT &apos;0&apos;, \n&quot; +</div><div class="line">                &quot;shop_id TEXT NOT NULL DEFAULT &apos;0&apos;, \n&quot; +</div><div class="line">                &quot;shop_name TEXT NOT NULL DEFAULT &apos;0&apos;, \n&quot; +</div><div class="line">                &quot;sku_id INTEGER NOT NULL DEFAULT 0, \n&quot; +</div><div class="line">                &quot;item INTEGER NOT NULL DEFAULT 0, \n&quot; +</div><div class="line">                &quot;sku_dic BLOB, \n&quot; +</div><div class="line">                &quot;keyID INTEGER UNIQUE PRIMARY KEY AUTOINCREMENT \n&quot; +</div><div class="line">                &quot;);&quot;</div><div class="line">                </div><div class="line">                if !db.executeStatements(sql_stmt) &#123;</div><div class="line">                    print(&quot;Error: \(db.lastErrorMessage())&quot;)</div><div class="line">                &#125;</div><div class="line">                db.close()</div><div class="line">            &#125; else &#123;</div><div class="line">                print(&quot;Error: \(db.lastErrorMessage())&quot;)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        let feedlogDb = FMDatabase(path: databasePath)</div><div class="line">        return feedlogDb</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///插入数据</div><div class="line">    func insert(model:ShoppingCartModel)&#123;</div><div class="line">        </div><div class="line">        //插入数据之前要查看数据库是否存在该id</div><div class="line">        let tempModel = self.selectModel(model)</div><div class="line">        if tempModel != nil &#123;//有相同的id则更新数据</div><div class="line">            tempModel?.number = model.number! + (tempModel?.number)!</div><div class="line">            self.update(tempModel!, success: &#123; </div><div class="line">                </div><div class="line">            &#125;)</div><div class="line">        &#125;else&#123;</div><div class="line">            let sql=&quot;INSERT INTO ShopCar_Sqlite (imgurl,describe,ID,number,price,shop_id,shop_name,sku_id,sku_dic,item) &quot;+&quot;VALUES (?,?,?,?,?,?,?,?,?,?)&quot;</div><div class="line">            let db = self.getDb()</div><div class="line">            db.open()</div><div class="line">            </div><div class="line">            let sku_dic = try? NSJSONSerialization.dataWithJSONObject(model.sku_dic!, options: NSJSONWritingOptions.PrettyPrinted)</div><div class="line">          </div><div class="line">            if let imgurl = model.attributeModel?.image, let describe = model.attributeModel?.name,let ID = model.skuModel?.ID,let number = model.number,let price = model.skuModel?.price,let shop_id = model.shop_id,let shop_name = model.shop_name,let sku_id = model.sku_id,let sku_dic = sku_dic,let item = model.item&#123;</div><div class="line">                </div><div class="line">                db.executeUpdate(sql, withArgumentsInArray: [imgurl,describe,ID,number,price,shop_id,shop_name,sku_id,sku_dic,item])</div><div class="line">            &#125;</div><div class="line">            db.close()</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///更新选购数量</div><div class="line">    func update(model:ShoppingCartModel,success:(()-&gt;()))&#123;</div><div class="line">        let sql = &quot;UPDATE ShopCar_Sqlite SET number=? WHERE ID=?&quot;</div><div class="line">        let db = self.getDb()</div><div class="line">        db.open()</div><div class="line">        db.executeUpdate(sql, withArgumentsInArray: [model.number!,model.ID!])</div><div class="line">        db.close()</div><div class="line">        success()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///更新model的多个属性</div><div class="line">    func updateModel(model:ShoppingCartModel)&#123;</div><div class="line">        let sql = &quot;UPDATE ShopCar_Sqlite SET number=?,sku_dic=?,ID=? WHERE ID=?&quot;</div><div class="line">        let db = self.getDb()</div><div class="line">        db.open()</div><div class="line">        </div><div class="line">        let sku_dic = try? NSJSONSerialization.dataWithJSONObject(model.sku_dic!, options: NSJSONWritingOptions.PrettyPrinted)</div><div class="line">        </div><div class="line">        if let sku_dic = sku_dic,let sku_id = model.sku_id&#123;</div><div class="line">            db.executeUpdate(sql, withArgumentsInArray: [model.number!,sku_dic,sku_id,model.ID!])</div><div class="line">        &#125;</div><div class="line">        db.close()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///删除数据一条数据</div><div class="line">    func remove(model:ShoppingCartModel)&#123;</div><div class="line">        let sql = &quot;DELETE FROM ShopCar_Sqlite WHERE ID = ?&quot;</div><div class="line">        let db = self.getDb()</div><div class="line">        db.open()</div><div class="line">        db.executeUpdate(sql, withArgumentsInArray: [model.ID!])</div><div class="line">        db.close()</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///查找一条数据</div><div class="line">    func selectModel(model:ShoppingCartModel)-&gt;ShoppingCartModel? &#123;</div><div class="line">        </div><div class="line">        let sql = &quot;SELECT * FROM ShopCar_Sqlite WHERE ID = ?&quot;</div><div class="line">        let db = self.getDb()</div><div class="line">        db.open()</div><div class="line">        let tempModel:ShoppingCartModel</div><div class="line">        if let tempID = model.skuModel?.ID &#123;</div><div class="line">            let rs = db.executeQuery(sql, withArgumentsInArray: [tempID])</div><div class="line">            tempModel = ShoppingCartModel()</div><div class="line">            while rs.next() &#123;</div><div class="line">                </div><div class="line">                tempModel.imgurl = rs.stringForColumn(&quot;imgurl&quot;)</div><div class="line">                tempModel.describe = rs.stringForColumn(&quot;describe&quot;)</div><div class="line">                tempModel.ID = Int(rs.intForColumn(&quot;ID&quot;))</div><div class="line">                tempModel.number = Int(rs.intForColumn(&quot;number&quot;))</div><div class="line">                tempModel.price = (rs.stringForColumn(&quot;price&quot;) as NSString).floatValue</div><div class="line">                tempModel.shop_id = rs.stringForColumn(&quot;shop_id&quot;)</div><div class="line">                tempModel.shop_name = rs.stringForColumn(&quot;shop_name&quot;)</div><div class="line">                tempModel.sku_id = Int(rs.intForColumn(&quot;sku_id&quot;))</div><div class="line">                tempModel.item = Int(rs.intForColumn(&quot;item&quot;))</div><div class="line">                let sku_dic:NSArray = try! NSJSONSerialization.JSONObjectWithData(rs.dataForColumn(&quot;sku_dic&quot;), options: NSJSONReadingOptions.MutableContainers) as! NSArray</div><div class="line">                tempModel.sku_dic = sku_dic</div><div class="line">            &#125;</div><div class="line">            if tempModel.ID == nil &#123;</div><div class="line">                db.close()</div><div class="line">                return nil</div><div class="line">            &#125;else&#123;</div><div class="line">                db.close()</div><div class="line">                return tempModel</div><div class="line">            &#125;</div><div class="line">    </div><div class="line">        &#125;else&#123;</div><div class="line">            db.close()</div><div class="line">            return nil</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///获取所有的数据</div><div class="line">    func getShopCarCatch()-&gt;NSMutableArray?&#123;</div><div class="line">        let sql = &quot;SELECT * FROM ShopCar_Sqlite WHERE keyID &gt;= ?&quot;</div><div class="line">        let db = self.getDb()</div><div class="line">        db.open()</div><div class="line">        let array = NSMutableArray()</div><div class="line">        let rs = db.executeQuery(sql, withArgumentsInArray: [0])</div><div class="line">        </div><div class="line">        while rs.next() &#123;</div><div class="line">            let model:ShoppingCartModel = ShoppingCartModel()</div><div class="line">            model.imgurl = rs.stringForColumn(&quot;imgurl&quot;)</div><div class="line">            model.describe = rs.stringForColumn(&quot;describe&quot;)</div><div class="line">            model.ID = Int(rs.intForColumn(&quot;ID&quot;))</div><div class="line">            model.number = Int(rs.intForColumn(&quot;number&quot;))</div><div class="line">            model.price = (rs.stringForColumn(&quot;price&quot;) as NSString).floatValue</div><div class="line">            model.shop_id = rs.stringForColumn(&quot;shop_id&quot;)</div><div class="line">            model.shop_name = rs.stringForColumn(&quot;shop_name&quot;)</div><div class="line">            model.sku_id = Int(rs.intForColumn(&quot;sku_id&quot;))</div><div class="line">            model.item = Int(rs.intForColumn(&quot;item&quot;))</div><div class="line">            let sku_dic:NSArray = try! NSJSONSerialization.JSONObjectWithData(rs.dataForColumn(&quot;sku_dic&quot;), options: NSJSONReadingOptions.MutableContainers) as! NSArray</div><div class="line">            model.sku_dic = sku_dic</div><div class="line">            array.addObject(model)</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">        db.close()</div><div class="line">        return array</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    ///删除数据库文件</div><div class="line">    func deleteFile()&#123;</div><div class="line">        //tip:此处直接把数据库文件删除了，可以用sq语句只删除表单</div><div class="line">        let fileManage = NSFileManager.defaultManager()</div><div class="line">        let databasePath = &quot;/ShopCar_Sqlite.db&quot;.documentPath()</div><div class="line">        if fileManage.fileExistsAtPath(databasePath) &#123;</div><div class="line">            try! fileManage.removeItemAtPath(databasePath)</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/05/基于swift的FMDB使用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/07/22/ARKit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【转】ARKit的使用
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2015/09/09/iOS各种不同的加密方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS各种不同的加密方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -219,8 +293,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

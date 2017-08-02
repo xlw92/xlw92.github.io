@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | xlw92&#39;s blog</title>
+  <title>Linux常用命令 | xlw92&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xlw92&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="linux的命令实在是太多了，对于我这种记忆力像金鱼的人来说基本上是记不住的从装hackintosh到买了自己macbook pro 然后到iOS开发，我还是记不住这么多命令。这次就总结下linux下的基本命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2014/06/08/Linux 常用命令/index.html">
 <meta property="og:site_name" content="xlw92&#39;s blog">
+<meta property="og:description" content="linux的命令实在是太多了，对于我这种记忆力像金鱼的人来说基本上是记不住的从装hackintosh到买了自己macbook pro 然后到iOS开发，我还是记不住这么多命令。这次就总结下linux下的基本命令">
+<meta property="og:updated_time" content="2017-07-26T14:51:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xlw92&#39;s blog">
+<meta name="twitter:title" content="Linux常用命令">
+<meta name="twitter:description" content="linux的命令实在是太多了，对于我这种记忆力像金鱼的人来说基本上是记不住的从装hackintosh到买了自己macbook pro 然后到iOS开发，我还是记不住这么多命令。这次就总结下linux下的基本命令">
   
     <link rel="alternative" href="/atom.xml" title="xlw92&#39;s blog" type="application/atom+xml">
   
@@ -127,76 +131,547 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Linux 常用命令" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/23/iOS开发tips/" class="archive-article-date">
-  	<time datetime="2017-07-23T12:40:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/23/iOS开发tips/">【转】iOS开发一些基本小tips</a>
+    <h1 class="article-title" itemprop="name">
+      Linux常用命令
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/22/ARKit/" class="archive-article-date">
-  	<time datetime="2017-07-22T04:13:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
+        
+        <a href="/2014/06/08/Linux 常用命令/" class="archive-article-date">
+  	<time datetime="2014-06-08T04:46:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-06-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/22/ARKit/">【转】ARKit的使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>linux的命令实在是太多了，对于我这种记忆力像金鱼的人来说基本上是记不住的从装hackintosh到买了自己macbook pro 然后到iOS开发，我还是记不住这么多命令。这次就总结下linux下的基本命令</p>
+</blockquote>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>man</strong></td>
+<td style="text-align:center">查看指令说明</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>info</strong></td>
+<td style="text-align:center">分段落查看指令说明，与man类似</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>whatis</strong></td>
+<td style="text-align:center">输出man里面的短描述，相当于man -f</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>apropos</strong></td>
+<td style="text-align:center">通过关键字搜索man，相当于man -k</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>shutdown</strong></td>
+<td style="text-align:center">关机</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>reboot, halt, poweroff</strong></td>
+<td style="text-align:center">重启与关机</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>ls</strong></td>
+<td style="text-align:center">输出目录列表</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cd</strong></td>
+<td style="text-align:center">切换到指定目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cp</strong></td>
+<td style="text-align:center">复制文件或目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mv</strong></td>
+<td style="text-align:center">移动文件或目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>rm</strong></td>
+<td style="text-align:center">删除文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cat</strong>/<strong>tac</strong>/<strong>nl</strong></td>
+<td style="text-align:center">链接并输出文件内容，tac为倒着输出，nl则输出行号</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>more</strong>/<strong>less</strong></td>
+<td style="text-align:center">一页页显示文件内容，less可往前翻页</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>head</strong>/<strong>tail</strong></td>
+<td style="text-align:center">只输出文件内容头/尾几行</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>od</strong></td>
+<td style="text-align:center">以二进制输出文件内容</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>pwd</strong></td>
+<td style="text-align:center">输出当前工作目录路径</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>basename</strong></td>
+<td style="text-align:center">从一个路径中取出文件名</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>dirname</strong></td>
+<td style="text-align:center">从一个路径中取出路径名</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mkdir</strong></td>
+<td style="text-align:center">新建目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>rmdir</strong></td>
+<td style="text-align:center">删除空目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>chgrp</strong></td>
+<td style="text-align:center">更改文件所属群组</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>chown</strong></td>
+<td style="text-align:center">更改文件拥有者</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>chmod</strong></td>
+<td style="text-align:center">更改文件的权限</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>groupadd</strong></td>
+<td style="text-align:center">新建群组</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>useradd</strong></td>
+<td style="text-align:center">新建用户</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>id</strong></td>
+<td style="text-align:center">查阅用户的属性</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>umask</strong></td>
+<td style="text-align:center">文件的预设权限</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>touch</strong></td>
+<td style="text-align:center">新建空文件或修改文件时间</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>su</strong></td>
+<td style="text-align:center">切换用户</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>exit</strong></td>
+<td style="text-align:center">退出一个状态</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>date</strong></td>
+<td style="text-align:center">显示日期与时间</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cal</strong></td>
+<td style="text-align:center">显示日历</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>echo</strong></td>
+<td style="text-align:center">输出一行文本</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>sync</strong></td>
+<td style="text-align:center">同步硬盘数据</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>init</strong></td>
+<td style="text-align:center">切换登录模式</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>uname</strong></td>
+<td style="text-align:center">输出系统相关信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>chattr</strong></td>
+<td style="text-align:center">配置文件隐藏属性</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>lsattr</strong></td>
+<td style="text-align:center">查看文件隐藏属性</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>file</strong></td>
+<td style="text-align:center">查看文件类型</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>which</strong></td>
+<td style="text-align:center">寻找可执行的命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>whereis/locate/find</strong></td>
+<td style="text-align:center">寻找文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>chsh</strong></td>
+<td style="text-align:center">更改默认shell</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">磁盘相关命令</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>df</strong></td>
+<td style="text-align:center">输出磁盘所有文件系统挂载信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>du</strong></td>
+<td style="text-align:center">评估文件系统磁盘的使用量</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>dumpe2fs</strong></td>
+<td style="text-align:center">输出文件系统inode和block相关信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>ln</strong></td>
+<td style="text-align:center">新建一个指向已有文件的链接</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>fdisk</strong></td>
+<td style="text-align:center">操作磁盘分区表</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mkfs</strong></td>
+<td style="text-align:center">格式化文件系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mke2fs</strong></td>
+<td style="text-align:center">创建一个ext2/ext3的文件系统，具有详尽的定制化选项</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>fsck</strong></td>
+<td style="text-align:center">检查并修复文件系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>badblocks</strong></td>
+<td style="text-align:center">检查磁盘的坏道</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mount</strong></td>
+<td style="text-align:center">挂载文件系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>umount</strong></td>
+<td style="text-align:center">卸载文件系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>mknod</strong></td>
+<td style="text-align:center">建立装置特殊文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>e2label</strong></td>
+<td style="text-align:center">修改ext2/ext3/ext4文件系统的label</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tune2fs</strong></td>
+<td style="text-align:center">调整ext2/ext3/ext4文件系统的参数</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">压缩与打包相关命令</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>gzip/bzip2</strong></td>
+<td style="text-align:center">压缩文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>gunzip/bunzip2</strong></td>
+<td style="text-align:center">解压文件，一般可用gzip/bzip2 -d代替</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>zcat/bzcat</strong></td>
+<td style="text-align:center">输出文本压缩文件的内容</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tar</strong></td>
+<td style="text-align:center">打包多个目录或文件</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tar -j/-z</strong></td>
+<td style="text-align:center">tar加-j/-z可兼容bzip2/gzip的压缩和解压</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>dump</strong></td>
+<td style="text-align:center">备份整个文件系统或单一目录</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>restore</strong></td>
+<td style="text-align:center">恢复dump命令备份的文件系统</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>dd</strong></td>
+<td style="text-align:center">制作和转换一个文件，读取磁盘设备的内容并将整个设备备份成一个档案</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cpio</strong></td>
+<td style="text-align:center">备份任何东西</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Bash相关命令</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>alias</strong></td>
+<td style="text-align:center">设置命令别名</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>type</strong></td>
+<td style="text-align:center">输出命令相关信息，显示命令是否是外部命令或查询命令是否存在</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>export</strong></td>
+<td style="text-align:center">使变量变成环境变量</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>unset</strong></td>
+<td style="text-align:center">取消变量的设定</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>env</strong></td>
+<td style="text-align:center">列出所有环境变量及其说明</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>set</strong></td>
+<td style="text-align:center">列出所有变量及其说明</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>locale</strong></td>
+<td style="text-align:center">显示语言相关的设定</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>read</strong></td>
+<td style="text-align:center">读取键盘输入的变量</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>declare/typeset</strong></td>
+<td style="text-align:center">声明变量类型</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>ulimit</strong></td>
+<td style="text-align:center">查看和设置文件系统及程序的限定值</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>history</strong></td>
+<td style="text-align:center">查看内存内所有使用过的Bash历史</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>source</strong></td>
+<td style="text-align:center">读入环境配置文件的命令</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>cut</strong></td>
+<td style="text-align:center">对同一行的字符进行切割</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>grep</strong></td>
+<td style="text-align:center">分析一行字符，撷取我们想要的信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>last</strong></td>
+<td style="text-align:center">显示最新的几个登录信息</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>sort</strong></td>
+<td style="text-align:center">对数据进行排序</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>uinq</strong></td>
+<td style="text-align:center">对数据进行去重</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>wc</strong></td>
+<td style="text-align:center">对数据进行统计</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tee</strong></td>
+<td style="text-align:center">对standard output的数据进行双重导向，既输入到文件也输出到屏幕</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>tr</strong></td>
+<td style="text-align:center">删除某段文字或是进行替换</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>col</strong></td>
+<td style="text-align:center">过滤转义字符</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>join</strong></td>
+<td style="text-align:center">将两个文件所有具有相同数据的行进行连接</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>paste</strong></td>
+<td style="text-align:center">将两个文件行对行连接，用[tab]分割</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>expand</strong></td>
+<td style="text-align:center">将[tab]用空格代替</td>
+</tr>
+</tbody>
+</table>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2014/06/08/Linux 常用命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2015/02/14/UITextField的小tips和富文本/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          UITextField的小tips和富文本
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2014/04/05/ iOS_sqlite /" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SQLite简单操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -219,8 +694,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
